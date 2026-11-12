@@ -1,13 +1,20 @@
-.head {
+@font-face {
+    font-family: "CormorantGaramond";
+    src: url("../assets/fonts/CormorantGaramond-VariableFont_wght.ttf") format("truetype");
+}
+
+.Head {
     background-color: #FFFFFF;
+    height: 101px;
 }
 
 .Main-body {
-    background-color: #EBE2D2;
+    background-color: #F2ECE3;
 }
 
 .Foot {
     background-color: #464646;
+
 }
 
 .Font-footer {
@@ -16,9 +23,48 @@
 
 .Card {
     background-color: #FFFFFF;
-    width: 633px
+    width: 633px;
+    height: 132px;
+    border-radius: 24px;
+    margin-top: 50px;
 }
 
 .Content-footer {
     color: #FFFFFF;
+}
+
+.Navigation a{
+    color: #000000;
+}
+
+.Navigation a{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.Card-Head button{
+    border-radius: 10px;
+}
+
+.Content-main h1{
+    font-family: CormorantGaramond;
+    font-size: 80px;
+    margin-left: 30%;
+    margin-right: 10%;
+    line-height: 98.3%;
+}
+
+.Content-main button{
+    background-color: #EBE2D2;
+    border-radius: 10px;
+    border: #EBE2D2;
+}
+
+.Head img{
+    padding:40px 0px 0px 50px;
+}
+
+.Content-main input{
+    padding: 50px;
+    border-radius: 73px;
 }
