@@ -47,11 +47,11 @@
 }
 
 .Content-main h1{
+    display: flex;
     font-family: CormorantGaramond;
     font-size: 80px;
-    margin-left: 30%;
-    margin-right: 10%;
     line-height: 98.3%;
+    justify-content: center;
 }
 
 .Content-main button{
@@ -67,4 +67,42 @@
 .Content-main input{
     padding: 50px;
     border-radius: 73px;
+    margin-top: 100px;
+}
+
+.Content-main h5 {
+    display: flex;
+    justify-content: center;
+}
+
+.Content-main input{
+    display: block;
+    margin: 0% auto;
+    margin-top: 50px;
+    width: 867px;
+    height: 254px;
+    background-color: #F9F3E9;
+}
+
+.Filters{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    padding: 40px 108px;
+}
+
+.main-button{
+    display: block;
+    padding: 40px 108px;
+    margin: 0% auto;
+    font-size: 24px;
+}
+
+.main-button:Hover{
+    background-color: #000000;
+}
+
+.Content-main .main-button {
+    background-color: #4A3831;
+    color: white;
 }
