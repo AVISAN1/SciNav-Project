@@ -88,7 +88,6 @@
     display: flex;
     justify-content: space-between;
     margin-top: 50px;
-    padding: 40px 108px;
 }
 
 .main-button{
@@ -105,4 +104,17 @@
 .Content-main .main-button {
     background-color: #4A3831;
     color: white;
+}
+
+.Cards{
+    margin-top:100px ;
+    margin-bottom:500px ;
+}
+
+.Navigation{
+    display: flex;
+}
+
+header a{
+    margin-top: 50px;
 }
