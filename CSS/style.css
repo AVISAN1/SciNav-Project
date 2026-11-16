@@ -97,7 +97,6 @@
 
 .Content-main input{
     display: block;
-    margin: 0% auto;
     margin-top: 150px;
     width: 830px;
     height: 200px;
@@ -247,7 +246,8 @@ header a{
 }
 
 .Main-input{
-    display: block;
+    display: flex;
+    justify-content: center;
 }
 
 .text-head .Author{
@@ -271,4 +271,27 @@ header a{
 .Under-buttons .Score{
     display: flex;
     justify-content: end;
+}
+
+.Search {
+    display: flex;
+    justify-content: end;
+    padding-top: 10px;
+    padding-right: 50px;
+}
+
+.Main-input-block {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.Export{
+    width: 161px;
+    height: 38px;
+}
+
+.Search button{
+    border-radius: 14px;
+    width: 54px;
+    height: 54px;
 }
