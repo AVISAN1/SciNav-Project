@@ -59,10 +59,6 @@
     text-decoration: none;
 }
 
-.Card-Head button{
-    border-radius: 10px;
-}
-
 .Content-main h1{
     display: flex;
     font-family: CormorantGaramond;
@@ -149,7 +145,6 @@ header a{
 
 .Card-Head{
     display: flex;
-    margin-bottom: 10px;
 }
 
 .Card-Head h5{
@@ -260,12 +255,20 @@ header a{
 }
 
 .Main-input button{
-    margin-left:500px;
-    padding: 50px;
+    margin-left:800px;
+    padding: 40px;
     border-radius: 14px;
 }
 
 
 .Card .Under-buttons{
-    display: fl;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 30px;
+
+}
+
+.Under-buttons .Score{
+    display: flex;
+    justify-content: end;
 }
