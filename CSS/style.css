@@ -288,10 +288,18 @@ header a{
 .Export{
     width: 161px;
     height: 38px;
+    margin-left: 10px;
 }
 
 .Search button{
     border-radius: 14px;
     width: 54px;
     height: 54px;
+    background-color: #4A3831;
+}
+
+.Score{
+    padding-left: 240px;
+    padding-top: 10px;
+
 }
