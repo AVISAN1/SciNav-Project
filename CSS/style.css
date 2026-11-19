@@ -301,5 +301,23 @@ header a{
 .Score{
     padding-left: 240px;
     padding-top: 10px;
+}
 
+.Main-input-block{
+    border-bottom: 40px solid #4A3831;
+    border-width: 13px;
+    border-radius: 14px;
+    border-left: 13px solid #4A3831;
+}
+
+.Under-buttons .Export:hover{
+    background-color: #4A3831;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.Under-buttons .add:hover{
+    background-color: #4A3831;
+    color: #ffffff;
+    cursor: pointer;
 }
