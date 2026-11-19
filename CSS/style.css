@@ -83,7 +83,6 @@
 .Content-main input{
     padding: 50px;
     border-radius: 73px;
-    margin-top: 200px;
     border: #4A3831;
     font-size: 100px;
 }
@@ -97,10 +96,13 @@
 
 .Content-main input{
     display: block;
-    margin-top: 150px;
     width: 830px;
     height: 200px;
     background-color: #F9F3E9;
+}
+
+.Content-main input:focus {
+    outline: none;
 }
 
 .Filters{
@@ -223,7 +225,7 @@ header a{
 }
 
 .Content-main section{
-    margin-bottom: 20px;
+    margin-bottom: 200px;
 }
 
 
@@ -252,12 +254,6 @@ header a{
 
 .text-head .Author{
     font-family: Roboto-ExtraLight;
-}
-
-.Main-input button{
-    margin-left:800px;
-    padding: 40px;
-    border-radius: 14px;
 }
 
 
@@ -306,8 +302,10 @@ header a{
 .Main-input-block{
     border-bottom: 40px solid #4A3831;
     border-width: 13px;
-    border-radius: 14px;
+    border-radius: 73px;
     border-left: 13px solid #4A3831;
+    border-right: 13px solid #4A3831;
+    border-top: 13px solid #4A3831;
 }
 
 .Under-buttons .Export:hover{
@@ -320,4 +318,20 @@ header a{
     background-color: #4A3831;
     color: #ffffff;
     cursor: pointer;
+}
+
+
+.Search button{
+    color: #FFFFFF;
+}
+
+.Search button:hover{
+    background-color: #EBE2D2;
+    color: #000000;
+    cursor: pointer;
+}
+
+.Under-buttons .add {
+    background-color: #FFFFFF;
+    border: 1px solid #000000;
 }
