@@ -77,7 +77,7 @@
 }
 
 .Head img{
-    padding:40px 0px 0px 50px;
+    padding:30px 0px 0px 90px;
 }
 
 .Content-main input{
@@ -269,6 +269,10 @@ header a{
     justify-content: end;
 }
 
+.Score {
+    font-size: 28px;
+}
+
 .Search {
     display: flex;
     justify-content: end;
@@ -334,4 +338,20 @@ header a{
 .Under-buttons .add {
     background-color: #FFFFFF;
     border: 1px solid #000000;
+}
+
+.Search button{
+    margin-bottom: 20px;
+}
+
+.registration{
+    margin-left: 30px;
+}
+
+.Login{
+    margin-left: 30px;
+}
+
+.Navigation img{
+    padding-bottom: 30px;
 }
