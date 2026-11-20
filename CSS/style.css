@@ -14,6 +14,9 @@
     src: url("../assets/fonts/Roboto-ExtraLight.ttf") format("truetype");
 }
 
+body {
+    margin: 0;
+}
 
 .Head {
     background-color: #FFFFFF;
@@ -37,7 +40,7 @@
 .Card {
     background-color: #FFFFFF;
     width: 663px;
-    height: 162px;
+    height: 172px;
     border-radius: 24px;
     margin-top: 50px;
     border: 2px solid #EBE2D2;
@@ -67,6 +70,7 @@
     justify-content: center;
     margin-bottom: 0%;
     margin-top: 120px;
+    text-align: center;
 
 }
 
@@ -136,7 +140,6 @@
 }
 
 header a{
-    margin-top: 50px;
     font-size: 22px;
 }
 
@@ -330,8 +333,6 @@ header a{
 }
 
 .Search button:hover{
-    background-color: #EBE2D2;
-    color: #000000;
     cursor: pointer;
 }
 
@@ -344,9 +345,6 @@ header a{
     margin-bottom: 20px;
 }
 
-.registration{
-    margin-left: 30px;
-}
 
 .Login{
     margin-left: 30px;
@@ -354,4 +352,40 @@ header a{
 
 .Navigation img{
     padding-bottom: 30px;
+}
+
+.Search button img {
+    width: 44px;
+    height: 44px;
+}
+
+.Main-input {
+    background-color: #4A3831;
+    border-radius: 30px;
+}
+
+.Navigation {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 50px;
+    box-sizing: border-box;
+}
+
+.Head img {
+    padding: 0;
+    margin: 0;
+}
+
+.Nav-button {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-left: auto;
+    width: auto;
+}
+
+.Navigation a {
+    margin: 0;
+    white-space: nowrap;
 }
