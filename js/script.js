@@ -15,7 +15,7 @@ ButtonInput.addEventListener('click', () => {
     fetch(params.url + encodeURIComponent(params.query) + '&rows=' + params.rows)
         .then(response => response.json())
         .then(data => {
-            console.log(data);
+            cards = []; // Очистка массива cards перед добавлением новых данных
             for (let item of data.message.items) {
                 for (let z in item) {
                     if (z == 'title') {
@@ -24,7 +24,9 @@ ButtonInput.addEventListener('click', () => {
                                 for (let w in item) {
                                     if (w === 'resource') {
                                         cards.push({ title: item[z][0], author: item[y][0] });
-                                        console.log(cards);
+                                        for (let x of cards) {
+                                            console.log(x);
+                                        }
                                     }
                                 }
                             }
@@ -35,3 +37,34 @@ ButtonInput.addEventListener('click', () => {
         });
 });
 
+
+
+
+const container = document.querySelector('.Cards');
+
+container.insertAdjacentHTML('beforeend', `
+<article class="Card">
+            <div class="Card-Head">
+                <img src="assets\images\Image tile.svg" alt="Notebook">
+                   <div class="text-head">
+                    <h5>
+                        Влияние социальных сетей на учебную мотивацию студентов
+                    </h5>
+                    <h6 class="Author">
+                        А. И. Иванов, М. С. Петрова · 2022 · Название журнала
+                    </h6>
+                </div>
+            </div> 
+                <div class="Under-buttons">
+                    <button class="add">
+                        Добавить в таблицу
+                    </button>
+                    <button class="Export">
+                        Экспорт
+                    </button>
+                    <p6 Class="Score">
+                        8/10
+                    </p6>
+                </div>    
+        </article>
+`);
