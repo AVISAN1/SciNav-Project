@@ -24,8 +24,9 @@ ButtonInput.addEventListener('click', () => {
                                 for (let w in item) {
                                     if (w === 'resource') {
                                         cards.push({ title: item[z][0], author: item[y][0] });
-                                        for (let x of cards) {
+                                        for (let x in cards) {
                                             console.log(x);
+                                            console.log(cards[x]);
                                         }
                                     }
                                 }
