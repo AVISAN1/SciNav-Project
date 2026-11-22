@@ -1,1 +1,2 @@
-https://serpapi.com/search?engine=google_scholar
+https://www.crossref.org/ сайт api
+https://api.crossref.org/works сам api
