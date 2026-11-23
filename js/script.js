@@ -24,10 +24,7 @@ ButtonInput.addEventListener('click', () => {
                                 for (let w in item) {
                                     if (w === 'resource') {
                                         cards.push({ title: item[z][0], author: item[y][0] });
-                                        for (let x in cards) {
-                                            console.log(x);
-                                            console.log(cards[x]);
-                                        }
+
                                     }
                                 }
                             }
@@ -35,24 +32,32 @@ ButtonInput.addEventListener('click', () => {
                     }
                 }
             }
-        });
-});
+          for (let card of cards) {
+            let author = card.author;
+            for (let key in author) {
+                if (key === 'given') {
+                    card.author = author[key];
+                    console.log(card);}
 
+                
+                else if (key === 'name') {
+                    card.author = card.author[key];
+                    console.log(card);    
+                }
+            }
 
-
-
-const container = document.querySelector('.Cards');
-
-container.insertAdjacentHTML('beforeend', `
-<article class="Card">
+          for (const n of cards) {
+    const container = document.querySelector('.Cards');
+    container.insertAdjacentHTML('beforeend', `
+        <article class="Card">
             <div class="Card-Head">
                 <img src="assets\images\Image tile.svg" alt="Notebook">
                    <div class="text-head">
                     <h5>
-                        Влияние социальных сетей на учебную мотивацию студентов
+                        ${n.title}
                     </h5>
                     <h6 class="Author">
-                        А. И. Иванов, М. С. Петрова · 2022 · Название журнала
+                        ${n.author}
                     </h6>
                 </div>
             </div> 
@@ -69,3 +74,12 @@ container.insertAdjacentHTML('beforeend', `
                 </div>    
         </article>
 `);
+} 
+
+          }
+});
+
+
+
+});
+
