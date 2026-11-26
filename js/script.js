@@ -1,3 +1,7 @@
+import { getScore } from './module/score.js';
+import { makeSavedSource, rememberSource } from './module/saved.js';
+import { startFilters, addFilterCard, getFilterData, applyFilters } from './module/filters.js';
+
 const ButtonInput = document.getElementById('2');
 let cards = [];
 
@@ -16,6 +20,7 @@ ButtonInput.addEventListener('click', () => {
         .then(response => response.json())
         .then(data => {
             cards = []; // Очистка массива cards перед добавлением новых данных
+            startFilters();
             for (let item of data.message.items) {
                 for (let z in item) {
                     if (z == 'title') {
@@ -23,11 +28,18 @@ ButtonInput.addEventListener('click', () => {
                             if (y === 'author' || y === 'editor' || y === 'translator' || y === 'chair' || y === 'contributor') {
                                 for (let w in item) {
                                     if (w === 'resource') {
+
                                         cards.push({ title: item[z][0], author: item[y][0] });
+                                        const addedCard = cards.at(-1);
+                                        addedCard.savedSource = makeSavedSource(addedCard.title, item[y], item.DOI);
+                                        addedCard.filterData = getFilterData(item, getScore(query, [addedCard.title ?? ""]));
+                                        const scores = getScore(query, cards.map(card => card.title ?? ''));
+
+                                        
 
                                     }
                                 }
-                            }
+                         }
                         }
                     }
                 }
@@ -47,11 +59,12 @@ ButtonInput.addEventListener('click', () => {
             }
 
           for (const n of cards) {
+             const scores = getScore(query, cards.map(card => card.title ?? ''));
     const container = document.querySelector('.Cards');
     container.insertAdjacentHTML('beforeend', `
         <article class="Card">
             <div class="Card-Head">
-                <img src="assets\images\Image tile.svg" alt="Notebook">
+                <img src="assets/images/Image%20tile.svg" alt="Notebook">
                    <div class="text-head">
                     <h5>
                         ${n.title}
@@ -69,14 +82,17 @@ ButtonInput.addEventListener('click', () => {
                         Экспорт
                     </button>
                     <p6 Class="Score">
-                        8/10
+                        ${n.filterData.score}%
                     </p6>
                 </div>    
         </article>
 `);
+    addFilterCard(container.lastElementChild, n.filterData);
+    rememberSource(container.lastElementChild, n.savedSource);
 } 
 
           }
+            applyFilters();
 });
 
 

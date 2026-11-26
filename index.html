@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="CSS\style.css">
-    <script src="js/script.js" defer></script>
+    <script type="module" src="./js/script.js"></script>
 </head>
 <body class="Main-body">
     <header class="Head">
@@ -19,9 +19,18 @@
                     Войти
                 </a>
                 <a class="registration" href="">
-                    Зарегистрируйтесь
+                    Зарегистрируйтесm
                 </a>
             </div>
+            <details class="Sources-menu" id="sources-menu">
+                <summary><span aria-hidden="true">☰</span> Источники <span id="sources-count">(0)</span></summary>
+                <section class="Sources-panel" aria-label="Сохранённые источники">
+                    <h2>Мои источники</h2>
+                    <p id="sources-empty">Список пока пуст.</p>
+                    <ol id="sources-list"></ol>
+                    <button type="button" id="sources-export" disabled>Скачать TXT</button>
+                </section>
+            </details>
         </nav>
     </header>
     <main class="Content-main">
@@ -53,30 +62,6 @@
             <button>По релевантности</button>
         </nav>
         <div class="Cards">
-            <article class="Card">
-                <div class="Card-Head">
-                    <img src="assets\images\Image tile.svg" alt="Notebook">
-                    <div class="text-head">
-                        <h5>
-                            Влияние социальных сетей на учебную мотивацию студентов
-                        </h5>
-                        <h6 class="Author">
-                            А. И. Иванов, М. С. Петрова · 2022 · Название журнала
-                        </h6>
-                    </div>
-                </div> 
-                    <div class="Under-buttons">
-                        <button class="add">
-                            Добавить в таблицу
-                        </button>
-                        <button class="Export">
-                            Экспорт
-                        </button>
-                        <p6 Class="Score">
-                            8/10
-                        </p6>
-                    </div>    
-            </article>
         </div>
         <footer class="Foot">
             <div class="text-footer">

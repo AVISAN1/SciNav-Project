@@ -40,7 +40,7 @@ body {
 .Card {
     background-color: #FFFFFF;
     width: 663px;
-    height: 172px;
+    min-height: 172px;
     border-radius: 24px;
     margin-top: 50px;
     border: 2px solid #EBE2D2;
@@ -262,6 +262,8 @@ header a{
 
 .Card .Under-buttons{
     display: flex;
+    align-items: center;
+    padding-right: 30px;
     justify-content: flex-start;
     padding-left: 30px;
 
@@ -302,8 +304,7 @@ header a{
 }
 
 .Score{
-    padding-left: 240px;
-    padding-top: 10px;
+    margin-left: auto;
 }
 
 .Main-input-block{
@@ -337,6 +338,9 @@ header a{
 }
 
 .Under-buttons .add {
+    min-width: 138px;
+    min-height: 42px;
+    padding: 6px 10px;
     background-color: #FFFFFF;
     border: 1px solid #000000;
 }
@@ -389,3 +393,59 @@ header a{
     margin: 0;
     white-space: nowrap;
 }
+
+/* Меню сохранённых источников */
+.Sources-menu {
+    position: relative;
+    margin-left: 20px;
+    flex-shrink: 0;
+}
+
+.Sources-menu summary {
+    cursor: pointer;
+    list-style: none;
+    white-space: nowrap;
+    padding: 8px 12px;
+    border: 1px solid #4A3831;
+    border-radius: 10px;
+    font-family: Arial, sans-serif;
+}
+
+.Sources-menu summary::-webkit-details-marker { display: none; }
+
+.Sources-panel {
+    position: absolute;
+    z-index: 10;
+    top: calc(100% + 8px);
+    right: 0;
+    width: min(330px, calc(100vw - 32px));
+    box-sizing: border-box;
+    padding: 16px;
+    background: #fff;
+    border: 1px solid #EBE2D2;
+    border-radius: 12px;
+    box-shadow: 0 5px 18px #0002;
+    font-family: Arial, sans-serif;
+}
+
+.Sources-panel h2 { margin: 0; font-size: 20px; }
+
+.Sources-panel ol {
+    max-height: 45vh;
+    overflow-y: auto;
+    padding-left: 24px;
+    overflow-wrap: anywhere;
+}
+
+.Sources-panel li { margin-bottom: 10px; }
+
+.Sources-panel button {
+    cursor: pointer;
+    padding: 6px 10px;
+    background: #EBE2D2;
+    border: 1px solid #EBE2D2;
+    border-radius: 8px;
+}
+
+.Sources-panel li button { margin-left: 8px; }
+.Sources-panel button:disabled { cursor: default; opacity: .55; }
